@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NTPORT | Digital Command Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="static/styles.css" />
+  </head>
+  <body>
+    <div class="bg-layer"></div>
+    <header class="site-header glass">
+      <a href="index.html" class="brand">NTPORT</a>
+      <nav>
+        <a data-auth-only href="dashboard.html">Dashboard</a>
+        <a data-auth-only href="profile.html">Profile</a>
+        <a data-auth-only href="settings.html">Settings</a>
+        <a data-auth-only data-logout href="#" class="ghost-btn">Logout</a>
+        <a data-guest-only href="login.html">Login</a>
+        <a data-guest-only href="signup.html" class="pill-link">Get Access</a>
+      </nav>
+    </header>
+
+    <main class="main-wrap">
+      <section class="hero glass">
+        <div>
+          <p class="eyebrow">Premium Digital Command Hub</p>
+          <h1>Operate your entire digital footprint through one elegant control layer.</h1>
+          <p class="lead">NTPORT unifies workflows, telemetry, and account intelligence into a secure, beautiful command center built for high-performance operators.</p>
+          <div class="cta-row">
+            <a href="signup.html" class="primary-btn">Create Account</a>
+            <a href="login.html" class="ghost-btn">Sign In</a>
+          </div>
+        </div>
+        <div class="hero-panel glass">
+          <h3>Real-Time Ops Snapshot</h3>
+          <ul>
+            <li><span>Nodes online</span><strong>124</strong></li>
+            <li><span>Threat blocks</span><strong>2,431</strong></li>
+            <li><span>Response SLA</span><strong>31ms</strong></li>
+            <li><span>Integrity score</span><strong>98.2%</strong></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="grid-three">
+        <article class="glass card">
+          <h3>Unified Intelligence</h3>
+          <p>Aggregate key operating metrics and events into a single source of truth without losing context.</p>
+        </article>
+        <article class="glass card">
+          <h3>Secure Identity Core</h3>
+          <p>Credential safeguards, encrypted session handling, and account controls engineered for reliability.</p>
+        </article>
+        <article class="glass card">
+          <h3>Elegant Performance</h3>
+          <p>Precision typography, smooth interactions, and compositional depth designed for premium usability.</p>
+        </article>
+      </section>
+
+      <section class="feature-band glass">
+        <h2>Built for operators who care about precision.</h2>
+        <p>From first login to everyday execution, every screen in NTPORT is crafted for confidence, speed, and control.</p>
+      </section>
+    </main>
+
+    <footer><p>© 2026 NTPORT — Secure command intelligence infrastructure.</p></footer>
+
+    <div id="cookie-consent" class="cookie-consent hidden glass">
+      <h3>Cookie Preferences</h3>
+      <p>We use essential and analytics cookies to secure sign-in flows and optimize your NTPORT experience.</p>
+      <div class="cookie-actions">
+        <button data-consent="reject" class="ghost-btn">Reject</button>
+        <button data-consent="custom" class="ghost-btn">Essential Only</button>
+        <button data-consent="accept" class="primary-btn">Accept All</button>
+      </div>
+    </div>
+    <script src="static/app.js"></script>
+  </body>
+</html>

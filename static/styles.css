@@ -1,8 +1,8 @@
 :root {
-  --bg: #060b16;
-  --bg-accent: #0d1d3d;
-  --text: #ecf3ff;
-  --muted: #93a7cc;
+    --bg: #0a1224;
+    --bg-accent: #17305c;
+    --text: #f3f8ff;
+    --muted: #a7b9da;
   --primary: #3984ff;
   --border: rgba(255, 255, 255, 0.14);
 }
@@ -12,7 +12,7 @@ body {
   font-family: 'Inter', sans-serif;
   color: var(--text);
   min-height: 100vh;
-  background: radial-gradient(circle at 15% 20%, #163262 0%, var(--bg) 35%, #03060f 100%);
+  background: radial-gradient(circle at 15% 20%, #214381 0%, var(--bg) 38%, #060c1b 100%);
 }
 .bg-layer {
   position: fixed; inset: 0; pointer-events: none;
@@ -23,7 +23,7 @@ body {
   margin: 1rem auto; width: min(1180px, 94%); padding: .9rem 1rem;
   border-radius: 18px; display: flex; justify-content: space-between; align-items: center;
 }
-.glass { backdrop-filter: blur(20px); background: rgba(9, 17, 34, .55); border: 1px solid var(--border); box-shadow: 0 20px 40px rgba(0,0,0,.28); }
+.glass { backdrop-filter: blur(20px); background: rgba(16, 28, 52, .58); border: 1px solid var(--border); box-shadow: 0 20px 40px rgba(0,0,0,.28); }
 .brand { color: #fff; text-decoration: none; font-weight: 800; letter-spacing: .14rem; }
 nav { display: flex; gap: .75rem; align-items: center; }
 nav a { color: var(--muted); text-decoration: none; }
