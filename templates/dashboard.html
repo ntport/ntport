@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block title %}NTPORT | Dashboard{% endblock %}
+{% block content %}
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    {% for category, message in messages %}
+      <div class="flash {{ category }}">{{ message }}</div>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+<div class="dashboard-layout">
+  <aside class="glass sidebar">
+    <h3>Command Navigation</h3>
+    <a href="{{ url_for('dashboard') }}">Overview</a>
+    <a href="{{ url_for('profile') }}">Profile Intelligence</a>
+    <a href="{{ url_for('settings') }}">Platform Settings</a>
+  </aside>
+
+  <section class="dashboard-main">
+    <div class="overview-row">
+      <div class="glass metric"><span>Uptime</span><strong>{{ metrics.uptime }}</strong></div>
+      <div class="glass metric"><span>Integrations</span><strong>{{ metrics.active_integrations }}</strong></div>
+      <div class="glass metric"><span>Security Score</span><strong>{{ metrics.security_score }}</strong></div>
+      <div class="glass metric"><span>Latency</span><strong>{{ metrics.latency }}</strong></div>
+    </div>
+
+    <div class="glass panel">
+      <h2>Mission Activity</h2>
+      <ul class="activity-list">
+        {% for item in activities %}
+        <li>
+          <h4>{{ item['title'] }}</h4>
+          <p>{{ item['description'] }}</p>
+          <small>{{ item['created_at'] }}</small>
+        </li>
+        {% else %}
+        <li><p>No recent events yet.</p></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+</div>
+{% endblock %}
