@@ -1,4 +1,3 @@
-/* NTPORT current branch source-of-truth */
 (function () {
   const CONSENT_KEY = 'ntport_cookie_pref';
   const USERS_KEY = 'ntport_users';
