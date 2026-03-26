@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block title %}NTPORT | Digital Command Platform{% endblock %}
+{% block content %}
+<section class="hero glass">
+  <div>
+    <p class="eyebrow">Premium Digital Command Hub</p>
+    <h1>Operate your entire digital footprint through one elegant control layer.</h1>
+    <p class="lead">NTPORT unifies workflows, telemetry, and account intelligence into a secure, beautiful command center built for high-performance operators.</p>
+    <div class="cta-row">
+      <a href="{{ url_for('signup') }}" class="primary-btn">Create Account</a>
+      <a href="{{ url_for('login') }}" class="ghost-btn">Sign In</a>
+    </div>
+  </div>
+  <div class="hero-panel glass">
+    <h3>Real-Time Ops Snapshot</h3>
+    <ul>
+      <li><span>Nodes online</span><strong>124</strong></li>
+      <li><span>Threat blocks</span><strong>2,431</strong></li>
+      <li><span>Response SLA</span><strong>31ms</strong></li>
+      <li><span>Integrity score</span><strong>98.2%</strong></li>
+    </ul>
+  </div>
+</section>
+
+<section class="grid-three">
+  <article class="glass card">
+    <h3>Unified Intelligence</h3>
+    <p>Aggregate key operating metrics and events into a single source of truth without losing context.</p>
+  </article>
+  <article class="glass card">
+    <h3>Secure Identity Core</h3>
+    <p>Credential safeguards, encrypted session handling, and account controls engineered for reliability.</p>
+  </article>
+  <article class="glass card">
+    <h3>Elegant Performance</h3>
+    <p>Precision typography, smooth interactions, and compositional depth designed for premium usability.</p>
+  </article>
+</section>
+
+<section class="feature-band glass">
+  <h2>Built for operators who care about precision.</h2>
+  <p>From first login to everyday execution, every screen in NTPORT is crafted for confidence, speed, and control.</p>
+</section>
+{% endblock %}

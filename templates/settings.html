@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}NTPORT | Settings{% endblock %}
+{% block content %}
+<section class="glass panel narrow">
+  <h1>Platform Settings</h1>
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      {% for category, message in messages %}
+        <div class="flash {{ category }}">{{ message }}</div>
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
+  <form method="post" class="auth-form">
+    <label>Display Name
+      <input type="text" name="full_name" value="{{ user['full_name'] or '' }}" />
+    </label>
+    <label>Role Label
+      <input type="text" name="role" value="{{ user['role'] or 'Operator' }}" />
+    </label>
+    <button class="primary-btn" type="submit">Save Changes</button>
+  </form>
+</section>
+{% endblock %}

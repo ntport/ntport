@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %}NTPORT | Profile{% endblock %}
+{% block content %}
+<section class="glass panel narrow">
+  <h1>Profile Intelligence</h1>
+  <div class="profile-grid">
+    <div>
+      <span>Operator</span>
+      <strong>{{ user['full_name'] or user['username'] }}</strong>
+    </div>
+    <div>
+      <span>Handle</span>
+      <strong>@{{ user['username'] }}</strong>
+    </div>
+    <div>
+      <span>Role</span>
+      <strong>{{ user['role'] }}</strong>
+    </div>
+    <div>
+      <span>Joined</span>
+      <strong>{{ user['created_at'] }}</strong>
+    </div>
+  </div>
+</section>
+{% endblock %}

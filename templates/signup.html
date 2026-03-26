@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block title %}NTPORT | Sign Up{% endblock %}
+{% block content %}
+<section class="auth-shell glass">
+  <h1>Create your NTPORT account</h1>
+  <p>Provision secure access in under a minute.</p>
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      {% for category, message in messages %}
+        <div class="flash {{ category }}">{{ message }}</div>
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
+  <form method="post" class="auth-form">
+    <label>Full Name
+      <input type="text" name="full_name" autocomplete="name" />
+    </label>
+    <label>Username
+      <input type="text" name="username" required minlength="3" autocomplete="username" />
+    </label>
+    <label>Password
+      <input type="password" name="password" required minlength="8" autocomplete="new-password" />
+    </label>
+    <button class="primary-btn" type="submit">Create Account</button>
+  </form>
+</section>
+{% endblock %}
